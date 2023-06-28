@@ -59,7 +59,7 @@ const Interactive: React.FC = () => {
   };
 
   const handleAgeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const newValue = parseInt(event.target.value, 10);
+    const newValue = event.target.value
     setAgeValue(newValue);
     calculateBeef(newValue, beef);
     calculateChicken(newValue, chicken);
