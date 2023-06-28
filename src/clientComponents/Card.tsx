@@ -4,7 +4,16 @@ import React from 'react';
 import EmojiGallery from './EmojiGallery';
 
 
-const Card: React.FC<{ totalBeef: number, totalChicken: number }> = ({ totalBeef, totalChicken }) => {
+const Card: React.FC<{ 
+    totalBeef: number, 
+    totalPork: number,
+    totalChicken: number 
+}> =
+ ({ 
+    totalBeef, 
+    totalPork,
+    totalChicken 
+}) => {
 
     return (
             <article
@@ -25,7 +34,13 @@ const Card: React.FC<{ totalBeef: number, totalChicken: number }> = ({ totalBeef
                     totalAnimal={totalBeef}
                 />
                 <EmojiGallery 
-                    numberOfEmojis={totalChicken < 100 ? totalChicken : 100}
+                    numberOfEmojis={totalPork < 500 ? totalPork : 500}
+                    emoji={'🐷'}
+                    animal={'pigs'}
+                    totalAnimal={totalPork}
+                />
+                <EmojiGallery 
+                    numberOfEmojis={totalChicken < 1000 ? totalChicken : 1000}
                     emoji={'🐔'}
                     animal={'chicken'}
                     totalAnimal={totalChicken}
