@@ -36,7 +36,7 @@ const Interactive: React.FC = () => {
 
     if (!isNaN(num1) && !isNaN(num2)) {
         // number * 365 days * 4 ounces in a serving / 72 ounce chicken yield from average chicken
-        const chicken = num1 * num2 * 365 * 4 / 72;
+        const chicken = num1 * num2 * 365 * 5 / 72;
         updateChicken(chicken);
     }
     else {
@@ -50,7 +50,7 @@ const Interactive: React.FC = () => {
 
     if (!isNaN(num1) && !isNaN(num2)) {
         // number * 365 days * 4 ounces in a serving / 9120 ounce beef yield from average cow
-        const pork = num1 * num2 * 365 * 4 / 284;
+        const pork = num1 * num2 * 365 * 5 / 2304;
         updatePork(pork);
     }
     else {
