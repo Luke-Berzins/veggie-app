@@ -20,9 +20,9 @@ const EmojiGallery: React.FC<EmojiGalleryProps> = ({ numberOfEmojis, emoji, anim
         <span className="text-xs text-gray-500">{animal}</span>
         </p>
     <div
-      className="grid gap-6 mb-6 md:grid-cols-10 grid-cols-4" >
+      className="grid gap-6 mb-6 md:grid-cols-6 grid-cols-4" >
     {EmojiArray.map((EmojiNumber, index: number) => (
-      <div key={index} className="text-lrg">
+      <div key={index} className="">
         {emoji}
       </div>  
     ))}

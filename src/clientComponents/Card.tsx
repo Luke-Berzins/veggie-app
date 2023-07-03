@@ -1,13 +1,15 @@
 "use client"
 
 import React from 'react';
+import Link from 'next/link';
 import EmojiGallery from './EmojiGallery';
+import  utils from '../utils/utils';
 
 
 const Card: React.FC<{ 
     totalBeef: number, 
     totalPork: number,
-    totalChicken: number 
+    totalChicken: number
 }> =
  ({ 
     totalBeef, 
@@ -17,14 +19,19 @@ const Card: React.FC<{
 
     return (
             <article
-                  className="flex flex-col h-full sm:w-full w-screen gap-4 rounded-lg border border-gray-100 bg-white p-6"
+                  className="flex flex-col h-full w-screen gap-4 rounded-lg border border-gray-100 bg-white md:pl-6 md:py-6 pl-3 py-3"
                 >
+                <div className="grid grid-cols-3 justify-items-start grid-flow gap-2 ">
+
                 <div
                     className="inline-flex self-start rounded bg-green-100 p-1 text-green-600"
-                >
+                    >
                     <span className="text-xs font-medium">
-                        {/* 220 pounds methane released per cow x 450 grams per pound x 25 gwp value for methane vs co2 * cow 192 grams cO2 released per km*/}
-                        {Math.round(220 * 450 * totalBeef * 25 / 192)} kilometers of driving </span>
+                        {utils.calculateKMs(totalBeef)} kilometers of driving </span>
+                    </div>
+                    <Link href="/about" className="text-blue-500 underline text-xs font-medium">
+                        How this was calculated →
+                    </Link>
                 </div>
                 
                 <EmojiGallery 

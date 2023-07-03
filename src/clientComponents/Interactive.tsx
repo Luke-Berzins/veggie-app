@@ -16,17 +16,58 @@ const Interactive: React.FC = () => {
     const [chicken, setChicken] = useState('');
     const [pork, setPork] = useState('');
 
+    const handleAgeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+      const newValue = event.target.value
+      setAgeValue(newValue);
+      calculateBeef(newValue, beef);
+      calculateChicken(newValue, chicken);
+      calculatePork(newValue, pork);
+    };
+  
+  
+    const handleBeefChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const newValue = event.target.value;
+      setBeef(newValue);
+      calculateBeef(ageValue, newValue);
+    };
+  
+    const handleChickenChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const newValue = event.target.value;
+      setChicken(newValue);
+      calculateChicken(ageValue, newValue);
+    };
+  
+    const handlePorkChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      const newValue = event.target.value;
+      setPork(newValue);
+      calculatePork(ageValue, newValue);
+    };
   const calculateBeef = (age: string, chicken: string) => {
     const num1 = parseFloat(age);
     const num2 = parseFloat(chicken);
 
     if (!isNaN(num1) && !isNaN(num2)) {
         // number * 365 days * 5 ounces in a serving / 9120 ounce beef yield from average cow
-        const cows = (num1 * num2) * 365 * 5 / 9120;
+        const cows = (num1 * num2 * 365 * 0.3125) / (1350 * 0.61);
         updateBeef(cows);
     }
     else {
         updateBeef(0)
+    }
+  };
+
+  
+  const calculatePork = (age: string, val2: string) => {
+    const num1 = parseFloat(age);
+    const num2 = parseFloat(val2);
+    
+    if (!isNaN(num1) && !isNaN(num2)) {
+      // number * 365 days * 4 ounces in a serving / 9120 ounce beef yield from average cow
+      const pork = (num1 * num2 * 365 * 0.375) / (258 * 0.57)
+      updatePork(pork);
+    }
+    else {
+      updatePork(0)
     }
   };
 
@@ -36,7 +77,7 @@ const Interactive: React.FC = () => {
 
     if (!isNaN(num1) && !isNaN(num2)) {
         // number * 365 days * 4 ounces in a serving / 72 ounce chicken yield from average chicken
-        const chicken = num1 * num2 * 365 * 5 / 72;
+        const chicken = (num1 * num2* 365 * 0.3125) / (3.9 * 0.75)
         updateChicken(chicken);
     }
     else {
@@ -44,46 +85,6 @@ const Interactive: React.FC = () => {
     }
   };
 
-  const calculatePork = (age: string, val2: string) => {
-    const num1 = parseFloat(age);
-    const num2 = parseFloat(val2);
-
-    if (!isNaN(num1) && !isNaN(num2)) {
-        // number * 365 days * 4 ounces in a serving / 9120 ounce beef yield from average cow
-        const pork = num1 * num2 * 365 * 5 / 2304;
-        updatePork(pork);
-    }
-    else {
-        updatePork(0)
-    }
-  };
-
-  const handleAgeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const newValue = event.target.value
-    setAgeValue(newValue);
-    calculateBeef(newValue, beef);
-    calculateChicken(newValue, chicken);
-    calculatePork(newValue, pork);
-  };
-
-
-  const handleBeefChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = event.target.value;
-    setBeef(newValue);
-    calculateBeef(ageValue, newValue);
-  };
-
-  const handleChickenChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = event.target.value;
-    setChicken(newValue);
-    calculateChicken(ageValue, newValue);
-  };
-
-  const handlePorkChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = event.target.value;
-    setPork(newValue);
-    calculatePork(ageValue, newValue);
-  };
 
 
     const updateBeef = (value: number) => {
@@ -99,11 +100,8 @@ const Interactive: React.FC = () => {
   };
 
       return (
-        <div className="flex flex-col items-center sm:justify-between p-24 h-screen border-black-800 sm:w-screen w-full">
-            <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><mark 
-            className="px-2 text-white bg-blue-600 rounded dark:bg-blue-500">Cowculator</mark></h1>
-            <br />
-            <br />
+        <div className="flex flex-col items-center sm:justify-between h-screen border-black-800 w-screen">
+          
             <Calculator
                 handleAgeChange={handleAgeChange}
                 handleBeefChange={handleBeefChange}
