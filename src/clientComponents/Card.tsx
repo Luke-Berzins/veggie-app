@@ -21,15 +21,27 @@ const Card: React.FC<{
             <article
                   className="flex flex-col h-full w-screen gap-4 rounded-lg border border-gray-100 bg-white md:pl-6 md:py-6 pl-3 py-3"
                 >
-                <div className="grid grid-cols-3 justify-items-start grid-flow gap-2 ">
+                <div className="flex justify-items-start justify-start ">
 
                 <div
-                    className="inline-flex self-start rounded bg-green-100 p-1 text-green-600"
+                    className="inline-flex self-start rounded bg-green-100 p-2 mr-2 text-green-600"
                     >
-                    <span className="text-xs font-medium">
-                        {utils.calculateKMs(totalBeef)} kilometers of driving </span>
-                    </div>
-                    <Link href="/about" className="text-blue-500 underline text-xs font-medium">
+                    <span className="text-xs font-medium text-center">
+                        {utils.calculateKMs(totalBeef, totalPork, totalChicken)} kilometers of driving </span>
+                </div>
+                <div
+                    className="inline-flex self-start rounded bg-green-100 p-2 mr-2 text-green-600"
+                    >
+                    <span className="text-xs font-medium text-center">
+                        {utils.calculateApples(totalBeef, totalPork, totalChicken)} apples </span>
+                </div>
+                <div
+                    className="inline-flex self-start rounded bg-green-100 p-2 mr-2 text-green-600"
+                    >
+                    <span className="text-xs font-medium text-center">
+                        {utils.calculatePlasticBags(totalBeef, totalPork, totalChicken)} plastic bags </span>
+                </div>
+                    <Link href="/about" className="text-blue-500 underline text-xs p-2 mr-2 font-medium text-left">
                         How this was calculated →
                     </Link>
                 </div>

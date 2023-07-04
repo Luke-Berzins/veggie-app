@@ -24,7 +24,7 @@ const Calculator: React.FC<{
  
 
   return (
-    <div  className="flex flex-col md:flex-row gap-4 md:justify-evenly" >
+    <div  className="flex flex-col lg:flex-row gap-4 md:justify-evenly" >
         <div className="flex flex-col md:items-start justify-end">
                 <label className="block mb-2 text-sm font-medium text-gray-900">
                 Age
