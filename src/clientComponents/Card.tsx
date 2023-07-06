@@ -21,11 +21,14 @@ const Card: React.FC<{
             <article
                   className="flex flex-col h-full w-11/12 gap-4 rounded-lg border-t-2 border-x-2 border-gray-300 bg-white md:pl-6 md:py-6 pl-3 py-3"
                 >
-                    <div>
+                   {
+
+                       totalBeef ? <div>
                         <span
                         className="text-base "
                         >The production of these animals releases the same level of carbon dioxide equivalent (CO2e) into the atomosphere as:</span>
-                    </div>
+                    </div> : <div></div>
+                    }
                 <div className="flex justify-items-start justify-start ">
 
                 <div

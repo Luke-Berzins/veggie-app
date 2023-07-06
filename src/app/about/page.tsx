@@ -29,16 +29,36 @@ const BlogPost = () => {
                 Now we can calculate how many animals are eaten in a lifetime:
             </p>
             <ul className="list-disc list-inside mb-4">
-                <li>Cows = Age x meals per day x 365 x serving size~0.3125lbs / (cow-weight~1350 x yield~0.61)</li>
-                <li>Pigs = Age x meals per day x 365 x serving size~0.375lbs / (pig-weight~258 x yield~0.57)</li>
-                <li>Chickens = Age x meals per day x 365 x serving size0.3125lbs / (chicken-weight~3.9 x yield~0.75)</li>
-            </ul>
-            <p className="mb-4">
-            To determine how the production of animal products equates to kilometers of driving, there's a measure known as C02e, or "Carbon Dioxide Equivalent".  It represents the damage 1 kilogram of CO2 has on our atmosphere, and other gases can be measured against it based on their own damage to the atmosphere. For example, methane is approximately 25x more damaging than CO2, so methane has a Carbon-Dioxide-Equivalent(CO2e) around 25. The website <a href="https://www.co2everything.com/">co2everything.com</a> has measured different the amount of CO2e different items create through production. They found that 100g of beef, pork and chicken produce 15.5CO2e, 2.4CO2e and 1.8CO2e, respectively. 
-            As these values represent the CO2e of each animal per 100g serving, we can convert the lbs value above about to 100g increments. A 1350lbs cow is 612350g. Divide that value by 100 to match the 100g measurement, and that's how much a single cow releases of CO2e over its life. We multiply that by the number of cows eaten in a lifetime to get total CO2e, do the same for the other 2 animals, add all the values together, and we get the total CO2e released to produce all the listed animals. 
-            
-            Once we have the total CO2e, it's easy, multiply that by how many CO2e's it takes to produce 1 km driven to get total kilometers equivalent.
 
+                <li>Cows = Age x meals per day x 365 x serving size (~0.3125lbs) / (cow weight (~1350) x yield (~0.61))</li>
+                <li>Pigs = Age x meals per day x 365 x serving size (~0.375lbs) / (pig weight (~258) x yield (~0.57))</li>
+                <li>Chickens = Age x meals per day x 365 x serving size (~0.3125lbs) / (chicken weight (~3.9) x yield (~0.75))</li>
+            </ul>
+            
+            <p className="mb-4">
+            
+            To determine how the production of animal products equates to kilometers of driving, 
+            there's a measure known as C02e, or "Carbon Dioxide Equivalent".  It represents the damage 1 kilogram of CO2 has on our atmosphere,
+             and other gases can be measured against it based on their own damage to the atmosphere. For example, methane is approximately 25x more damaging than CO2, 
+             so methane has a Carbon-Dioxide-Equivalent(CO2e) around 25. 
+                
+             </p>
+             
+            <p className="mb-4">
+
+             The website <a href="https://www.co2everything.com/" className="text-blue-500 underline">co2everything.com</a> has calculated 
+             the CO2e produced by various items during their production. It found that 100g of beef, pork, and chicken produce 15.5 CO2e, 2.4 CO2e, and 1.8 CO2e, respectively. 
+            </p>
+
+            
+             <p className="mb-4">
+             Since these figures represent the CO2e per 100g serving of each animal, we can adjust the weight of each animal to 100g increments. A 1350lb cow equals 612350g. Divide this by 100 to match the 100g measurement. 
+             Multiply the result by the number of cows consumed in a lifetime to get the total CO2e, and repeat the same for pigs and chickens. 
+            </p>
+
+             <p className="mb-4">
+             Adding all these values together gives us the total CO2e released to produce all the animals listed. We then convert this total CO2e into the equivalent number of kilometers driven,
+              by multiplying it by the amount of km that 1 CO2e will take you (around 5km).
             </p>
 
             <p className="mb-4">
