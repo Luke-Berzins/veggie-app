@@ -8,9 +8,6 @@ const BlogPost = () => {
             <h1 className="text-4xl font-bold mb-4">How Many Animals Would You Eat in a Lifetime?</h1>
             <br />
             <p className="mb-4">
-                Have you ever wondered how many animals you might consume if you ate one serving of meat every day throughout your life?
-            </p>
-            <p className="mb-4">
                 First, we need to know the average weights of cows, pigs, and chickens. The average cow weighs <a href="https://www.thecoldwire.com/how-much-does-a-cow-weigh/" className="text-blue-500 underline">1350 pounds</a>, 
                 
                 a pig <a href="https://beyondthetreat.com/how-much-does-a-pig-weigh/" className="text-blue-500 underline">288 pounds</a>, 
