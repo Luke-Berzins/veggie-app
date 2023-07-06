@@ -12,9 +12,9 @@ const Interactive: React.FC = () => {
     const [totalBeef, setTotalBeef] = useState<number>(0);
     const [totalChicken, setTotalChicken] = useState<number>(0);
     const [totalPork, setTotalPork] = useState<number>(0);
-    const [beef, setBeef] = useState('');
-    const [chicken, setChicken] = useState('');
-    const [pork, setPork] = useState('');
+    const [beef, setBeef] = useState('1');
+    const [chicken, setChicken] = useState('1');
+    const [pork, setPork] = useState('1');
 
     const handleAgeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
       const newValue = event.target.value

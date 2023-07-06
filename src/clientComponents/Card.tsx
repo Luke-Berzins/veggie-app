@@ -19,8 +19,13 @@ const Card: React.FC<{
 
     return (
             <article
-                  className="flex flex-col h-full w-screen gap-4 rounded-lg border border-gray-100 bg-white md:pl-6 md:py-6 pl-3 py-3"
+                  className="flex flex-col h-full w-11/12 gap-4 rounded-lg border-t-2 border-x-2 border-gray-300 bg-white md:pl-6 md:py-6 pl-3 py-3"
                 >
+                    <div>
+                        <span
+                        className="text-base "
+                        >The production of these animals releases the same level of carbon dioxide equivalent (CO2e) into the atomosphere as:</span>
+                    </div>
                 <div className="flex justify-items-start justify-start ">
 
                 <div
@@ -33,13 +38,13 @@ const Card: React.FC<{
                     className="inline-flex self-start rounded bg-green-100 p-2 mr-2 text-green-600"
                     >
                     <span className="text-xs font-medium text-center">
-                        {utils.calculateApples(totalBeef, totalPork, totalChicken)} apples </span>
+                        {utils.calculateApples(totalBeef, totalPork, totalChicken)} apples produced </span>
                 </div>
                 <div
                     className="inline-flex self-start rounded bg-green-100 p-2 mr-2 text-green-600"
                     >
                     <span className="text-xs font-medium text-center">
-                        {utils.calculatePlasticBags(totalBeef, totalPork, totalChicken)} plastic bags </span>
+                        {utils.calculatePlasticBags(totalBeef, totalPork, totalChicken)} plastic bags produced</span>
                 </div>
                     <Link href="/about" className="text-blue-500 underline text-xs p-2 mr-2 font-medium text-left">
                         How this was calculated →
