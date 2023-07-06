@@ -8,10 +8,10 @@ const BlogPost = () => {
             <h1 className="text-4xl font-bold mb-4">How Many Animals Would You Eat in a Lifetime?</h1>
             <br />
             <p className="mb-4">
-                Have you ever wondered how many animals you might consume if you ate one serving of meat every day throughout your life? Let's find out!
+                Have you ever wondered how many animals you might consume if you ate one serving of meat every day throughout your life?
             </p>
             <p className="mb-4">
-                First, we need to know the average weights of the animals in question. We'll focus on cows, pigs, and chickens. The average cow weighs <a href="https://www.thecoldwire.com/how-much-does-a-cow-weigh/" className="text-blue-500 underline">1350 pounds</a>, 
+                First, we need to know the average weights of cows, pigs, and chickens. The average cow weighs <a href="https://www.thecoldwire.com/how-much-does-a-cow-weigh/" className="text-blue-500 underline">1350 pounds</a>, 
                 
                 a pig <a href="https://beyondthetreat.com/how-much-does-a-pig-weigh/" className="text-blue-500 underline">288 pounds</a>, 
                 and a chicken is typically <a href="https://weighschool.com/whole-chicken-weights-sizes-servings/" className="text-blue-500 underline">3.9 pounds</a>.
@@ -34,8 +34,14 @@ const BlogPost = () => {
                 <li>Chickens = Age x meals per day x 365 x serving size0.3125lbs / (chicken-weight~3.9 x yield~0.75)</li>
             </ul>
             <p className="mb-4">
-            It's important to note that these are rough estimates and actual numbers can vary based on many factors, however it gives us perspective on our consumption patterns and the scale of our food system.
-        </p>
+            Determining how production of animal products equates to kilometers of driving, there's a measure known as C02e, or "Carbon Dioxide Equivalent".  It represents the damage 1 kilogram of CO2 has on our atmosphere, and other gases can be measured against it based on their own damage to the atmosphere. Ex. Methane is approximately 25x more damaging than CO2, so methane has a Carbon-Dioxide-Equivalent(CO2e) around 25. The website <a href="https://www.co2everything.com/">co2everything.com</a> has measured different products CO2e and found that 100g of beef, pork and chicken produce 15.5CO2e, 2.4CO2e and 18.2CO2e, respectively. 
+            These values represent the CO2e of each animal per 100g serving, so we convert the lbs value about to 100g for each animal. 1350lbs cow = 612350g. Divide that value by 100 to match the 100g measurement, and that's how much a single cow releases of CO2e over its life. We multiply that by the number of cows to get total CO2e, do the same for the other 2 animals, and we get the total CO2e released. Multiply that by how many CO2e's it takes to produce 1 km driven to get total kilometers equivalent.
+
+            </p>
+
+            <p className="mb-4">
+            These are rough estimates and actual numbers can vary based on many factors, however it illustrates our consumption patterns and the scale of our food system.
+            </p>
         <Link href="/" className="text-blue-500 underline">
                 Back to main
         </Link>

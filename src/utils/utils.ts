@@ -1,22 +1,22 @@
 function calculateKMs(totalBeef: number, totalPork: number, totalChicken: number): number { 
     {
-        //amount of animal * total 100g in animal * gwp per source * (km / gwp)
+        //(amount of animal * total 100g in animal (cow-1350lbs = 612350g)(288lbs = 1306g) * gwp per source) * kms produced for one 1 gwp
     }
-    return Math.round(((totalBeef * 6123.50 * 15.5) + (totalPork * 130.64 * 2.4) + (totalChicken * 17.69 * 182.2)) * 5)
+    return Math.round(((totalBeef * 6123.50 * 15.5) + (totalPork * 1306.35 * 2.4) + (totalChicken * 17.69 * 1.82)) * 5)
 }
 
 function calculateApples(totalBeef: number, totalPork: number, totalChicken: number): number { 
     {
-        //amount of animal * total 100g in animal * gwp per source * apple / gwp
+        //(amount of animal * total 100g in animal * gwp per source ) * apples produced for one 1 gwp
     }
-    return Math.round(((totalBeef * 6123.50 * 15.5 ) + (totalPork * 130.64 * 2.4 ) + (totalChicken * 17.69 * 182.2 )) * 17)
+    return Math.round(((totalBeef * 6123.50 * 15.5 ) + (totalPork * 1306.35 * 2.4 ) + (totalChicken * 17.69 * 1.82 )) * 17)
 }
 
 function calculatePlasticBags(totalBeef: number, totalPork: number, totalChicken: number): number { 
     {
-        //amount of animal * total 100g in animal * gwp per source * apple / gwp
+        //(amount of animal * total 100g in animal * gwp per source) * plastic bags produced for one 1 gwp
     }
-    return Math.round(((totalBeef * 6123.50 * 15.5 ) + (totalPork * 130.64 * 2.4 ) + (totalChicken * 17.69 * 182.2 )) * 0.63)
+    return Math.round(((totalBeef * 6123.50 * 15.5 ) + (totalPork * 1306.35 * 2.4 ) + (totalChicken * 17.69 * 1.82 )) * 0.63)
 }
 
 export default {
