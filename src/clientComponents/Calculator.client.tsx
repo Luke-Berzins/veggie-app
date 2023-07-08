@@ -24,8 +24,8 @@ const Calculator: React.FC<{
  
 
   return (
-    <div  className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-items-stretch" >
-        <div className="flex flex-col self-end ">
+    <div  className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-6 justify-items-stretch" >
+        <div className="md:col-start-2 flex flex-col self-end ">
                 <label htmlFor="age" className="block mb-2 text-sm font-medium text-gray-900">
                 Age
                 </label>
