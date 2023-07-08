@@ -19,7 +19,7 @@ const Card: React.FC<{
 
     return (
             <article
-                  className="flex flex-col h-full w-11/12 xl:w-7/9 2xl:w-1/3 gap-4 rounded-lg border-t-2 border-x-2 border-gray-300 bg-white md:pl-6 md:py-6 pl-3 py-3"
+                  className="flex flex-col h-full w-11/12 xl:w-7/9 2xl:w-2/3 gap-4 rounded-lg border-t-2 border-x-2 border-gray-300 bg-white md:pl-6 md:py-6 pl-3 py-3"
                 >
                    {
 
